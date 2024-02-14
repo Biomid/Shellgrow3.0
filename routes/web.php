@@ -43,6 +43,7 @@ Route::middleware(['auth','role:super-user'])->group(function (){
     Route::get('/apartament/create',[\App\Http\Controllers\AdminApartamentCreateController::class, 'index'])->middleware('role:super-user')->name('apartament');
     Route::get('/apartament/show',[\App\Http\Controllers\AdminApartamentCreateController::class, 'show'])->middleware('role:super-user')->name('apartament.show');
     Route::post('/apartament/create',[\App\Http\Controllers\AdminApartamentCreateController::class, 'store'])->middleware('role:super-user')->name('apartament.store');
+    Route::get('apartment/{id}', [\App\Http\Controllers\ApartmentController::class, 'show'])->name('apartment.show');
 
     Route::get('cost',function (){
         return view('cost');

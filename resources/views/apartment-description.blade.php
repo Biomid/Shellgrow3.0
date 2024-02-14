@@ -71,22 +71,20 @@
             </div>
         </nav>
     </x-slot>
+
     <div class="container">
-        <h1 class="mt-4 mb-3">Apartment List</h1>
+        <h1 class="mt-4 mb-3">User List</h1>
         <div class="row">
-            @foreach($apartments as $apartment)
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <x-nav-link :href="route('apartment.show', $apartment->id)"><h4 class="card-title">Id: {{$apartment->id}}</h4></x-nav-link>
-                            <p class="card-text">Name: {{$apartment->name}}</p>
-                            <p class="card-text">Local: {{$apartment->local}}</p>
-                        </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h4 class="card-title">Id: {{$apartment->id}}</h4>
+                        <p class="card-text">Name: {{$apartment->name}}</p>
+                        <p class="card-text">local: {{$apartment->local}}</p>
                     </div>
                 </div>
-            @endforeach
+            </div>
         </div>
     </div>
-
 
 </x-app-layout>
