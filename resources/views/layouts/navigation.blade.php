@@ -17,13 +17,16 @@
                     </x-nav-link>
                     @role('super-user')
                     <x-nav-link :href="route('roles.index')" :active="request()->routeIs('roles.index')">
-                        Roles
+                        User create
                     </x-nav-link>
                     <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
                         Users
                     </x-nav-link>
-                    <x-nav-link :href="route('users')" :active="request()->routeIs('users')">
-                        Apartment
+                    <x-nav-link :href="route('apartament')" :active="request()->routeIs('apartament')">
+                        Apartment create
+                    </x-nav-link>
+                    <x-nav-link :href="route('apartament.show')" :active="request()->routeIs('apartament.show')">
+                        Apartment list
                     </x-nav-link>
                     @endrole
                 </div>
